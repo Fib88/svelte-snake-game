@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../../App.svelte",
+    "../../Food.svelte",
+    "../../SnakeBody.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n  import Snake from \"./Snake.svelte\";\n  import Food from \"./Food.svelte\";\n\n  function isCollide(a, b) {\n    return !(\n      a.top < b.top ||\n      a.top > b.top ||\n      a.left < b.left ||\n      a.left > b.left\n    );\n  }\n\n  function getDirectionFromKeyCode(keyCode) {\n    if (keyCode === 38) {\n      return \"up\";\n    } else if (keyCode === 39) {\n      return \"right\";\n    } else if (keyCode === 37) {\n      return \"left\";\n    } else if (keyCode === 40) {\n      return \"down\";\n    }\n\n    return false;\n  }\n</script>\n\n<style>\n  main {\n    width: 1000px;\n    height: 700px;\n    border: solid black 1px;\n    position: relative;\n    margin: 20px auto;\n    background-image: url(\"../background.jpg\");\n    background-size: cover;\n  }\n  h2,\n  h1 {\n    text-align: center;\n  }\n</style>\n\n<h1>Snake Game</h1>\n<main>\n  <Snake />\n  <Food />\n</main>\n<h2>Score</h2>\n",
+    "<script>\n\n</script>\n\n<style>\n  .food {\n    width: 48px;\n    height: 48px;\n    left: 200px;\n    top: 200px;\n    position: absolute;\n    border: solid black 1px;\n    background-color: red;\n    border-radius: 50%;\n    z-index: 0;\n  }\n</style>\n\n<div class=\"food\" />\n",
+    "<script>\n\n</script>\n\n<style>\n  .snake-body {\n    background-color: green;\n    border: black 1px solid;\n    position: absolute;\n    width: 48px;\n    height: 48px;\n    z-index: 3;\n    top: 0;\n    left: 0;\n  }\n  .eyes {\n    position: absolute;\n    background-color: orange;\n    border-radius: 50%;\n    width: 20%;\n    height: 20%;\n  }\n  #leftEye {\n    left: 70%;\n    top: 10%;\n  }\n  #rightEye {\n    left: 70%;\n    bottom: 10%;\n  }\n  .snake-body.right {\n    transform: rotate(0deg);\n  }\n  .snake-body.left {\n    transform: rotate(180deg);\n  }\n  .snake-body.up {\n    transform: rotate(270deg);\n  }\n  .snake-body.down {\n    transform: rotate(90deg);\n  }\n</style>\n\n<div class=\"snake-body right\">\n  <div id=\"leftEye\" class=\"eyes\" />\n  <div id=\"rightEye\" class=\"eyes\" />\n</div>\n"
+  ],
+  "names": [],
+  "mappings": "AA6BE,IAAI,eAAC,CAAC,AACJ,KAAK,CAAE,MAAM,CACb,MAAM,CAAE,KAAK,CACb,MAAM,CAAE,KAAK,CAAC,KAAK,CAAC,GAAG,CACvB,QAAQ,CAAE,QAAQ,CAClB,MAAM,CAAE,IAAI,CAAC,IAAI,CACjB,gBAAgB,CAAE,IAAI,mBAAmB,CAAC,CAC1C,eAAe,CAAE,KAAK,AACxB,CAAC,AACD,iBAAE,CACF,EAAE,eAAC,CAAC,AACF,UAAU,CAAE,MAAM,AACpB,CAAC;ACpCD,KAAK,cAAC,CAAC,AACL,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,IAAI,CAAE,KAAK,CACX,GAAG,CAAE,KAAK,CACV,QAAQ,CAAE,QAAQ,CAClB,MAAM,CAAE,KAAK,CAAC,KAAK,CAAC,GAAG,CACvB,gBAAgB,CAAE,GAAG,CACrB,aAAa,CAAE,GAAG,CAClB,OAAO,CAAE,CAAC,AACZ,CAAC;ACVD,WAAW,cAAC,CAAC,AACX,gBAAgB,CAAE,KAAK,CACvB,MAAM,CAAE,KAAK,CAAC,GAAG,CAAC,KAAK,CACvB,QAAQ,CAAE,QAAQ,CAClB,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,OAAO,CAAE,CAAC,CACV,GAAG,CAAE,CAAC,CACN,IAAI,CAAE,CAAC,AACT,CAAC,AACD,KAAK,cAAC,CAAC,AACL,QAAQ,CAAE,QAAQ,CAClB,gBAAgB,CAAE,MAAM,CACxB,aAAa,CAAE,GAAG,CAClB,KAAK,CAAE,GAAG,CACV,MAAM,CAAE,GAAG,AACb,CAAC,AACD,QAAQ,cAAC,CAAC,AACR,IAAI,CAAE,GAAG,CACT,GAAG,CAAE,GAAG,AACV,CAAC,AACD,SAAS,cAAC,CAAC,AACT,IAAI,CAAE,GAAG,CACT,MAAM,CAAE,GAAG,AACb,CAAC,AACD,WAAW,MAAM,cAAC,CAAC,AACjB,SAAS,CAAE,OAAO,IAAI,CAAC,AACzB,CAAC"
+}
