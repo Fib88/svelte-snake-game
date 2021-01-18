@@ -1,4 +1,4 @@
-### Snake game using Svelte
+# Snake game using Svelte
 
 ## In this workshop we're going to work with Sveltejs
 
@@ -8,11 +8,10 @@ we'll be using the following concepts:
 - passing data between components
 
 **_Tools_**  
-VS Code for Linux
-[Starter Template]("")
+VS Code for Linux  
 [SvelteJs]("https://svelte.dev/")
 
-Extensions I used:
+Extensions:
 
 - Svelte for VS Code
 - Prettier - Code formatter
