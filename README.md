@@ -9,7 +9,7 @@ we'll be using the following concepts:
 
 **_Tools_**  
 VS Code for Linux  
-[SvelteJs]("https://svelte.dev/")
+https://svelte.dev/
 
 Extensions:
 
@@ -93,7 +93,7 @@ You'll see that there are 4 seperate components:
 
 ## Sources/Tips:
 
-Be sure to check out https://svelte.dev/  
+Be sure to check out https://svelte.dev/, maybe you can find inspiration in the [examples]('https://svelte.dev/examples#hello-world')?
 Find out what a spread operator is.  
 Dont forget to remove the hardcoded css values.  
 Read up on [setInterval()]("https://www.w3schools.com/jsref/met_win_setinterval.asp")  
